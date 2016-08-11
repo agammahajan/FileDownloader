@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="59Q-YH-IWa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloaderFile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-8h-Bs2">
+                                <rect key="frame" x="132" y="283" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="ZAS-a9-bPz"/>
+                                </constraints>
+                            </progressView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGg-vG-YEx">
+                                <rect key="frame" x="48" y="121" width="319" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Download Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4T-VH-58Q">
+                                <rect key="frame" x="58" y="324" width="299" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2452729344367981" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgf-Dh-Hhx">
+                                <rect key="frame" x="52" y="430" width="311" height="30"/>
+                                <state key="normal" title="Image Found ...Click to see">
+                                    <color key="titleColor" red="0.99955219030380249" green="0.0041730883531272411" blue="0.034396711736917496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EtG-Zj-Liv" kind="show" id="M1l-vK-7Bq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-7x-KFc">
+                                <rect key="frame" x="103" y="202" width="209" height="30"/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="046-GK-PUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="P4T-VH-58Q" secondAttribute="trailing" constant="37" id="6QB-rO-aXR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8M-7x-KFc" secondAttribute="trailing" constant="82" id="6uv-BM-Kut"/>
+                            <constraint firstItem="xgf-Dh-Hhx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="BDP-Zb-BUQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RGg-vG-YEx" secondAttribute="trailing" constant="27" id="CI6-dk-e3p"/>
+                            <constraint firstItem="Waj-8h-Bs2" firstAttribute="top" secondItem="B8M-7x-KFc" secondAttribute="bottom" constant="51" id="Eix-xY-eVL"/>
+                            <constraint firstItem="P4T-VH-58Q" firstAttribute="top" secondItem="Waj-8h-Bs2" secondAttribute="bottom" constant="39" id="HQk-ia-A0G"/>
+                            <constraint firstItem="P4T-VH-58Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="O2q-PN-hsq"/>
+                            <constraint firstItem="xgf-Dh-Hhx" firstAttribute="top" secondItem="P4T-VH-58Q" secondAttribute="bottom" constant="85" id="OZ4-uR-QLo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Waj-8h-Bs2" secondAttribute="trailing" constant="112" id="ZTW-Yl-WH2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xgf-Dh-Hhx" secondAttribute="trailing" constant="31" id="ZYl-5f-fcB"/>
+                            <constraint firstItem="RGg-vG-YEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="b5z-wV-OBh"/>
+                            <constraint firstItem="Waj-8h-Bs2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="e9z-3b-Opw"/>
+                            <constraint firstItem="B8M-7x-KFc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="h6S-Js-nos"/>
+                            <constraint firstItem="B8M-7x-KFc" firstAttribute="top" secondItem="RGg-vG-YEx" secondAttribute="bottom" constant="51" id="mwX-1p-lpb"/>
+                            <constraint firstItem="RGg-vG-YEx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="rfd-Sp-aFC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e2o-ub-iHp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="Complete" destination="P4T-VH-58Q" id="8u7-PS-kTR"/>
+                        <outlet property="Download" destination="B8M-7x-KFc" id="5La-So-HtK"/>
+                        <outlet property="ImageFound" destination="xgf-Dh-Hhx" id="X1W-Te-VgG"/>
+                        <outlet property="ProgressBar" destination="Waj-8h-Bs2" id="xcy-xF-el4"/>
+                        <outlet property="TextField" destination="RGg-vG-YEx" id="Dfy-db-fcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="623"/>
+        </scene>
+        <!--Second View-->
+        <scene sceneID="LEA-Hm-uGo">
+            <objects>
+                <viewController id="EtG-Zj-Liv" customClass="SecondView" customModule="DownloaderFile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QL2-Q5-Xu6"/>
+                        <viewControllerLayoutGuide type="bottom" id="txv-tK-Z4R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EZM-8e-Cgd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-d4-Gsh">
+                                <rect key="frame" x="103" y="104" width="208" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hc8-js-O8e">
+                                <rect key="frame" x="20" y="189" width="374" height="358"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hc8-js-O8e" firstAttribute="leading" secondItem="EZM-8e-Cgd" secondAttribute="leadingMargin" id="0lD-NV-npX"/>
+                            <constraint firstItem="LDs-d4-Gsh" firstAttribute="top" secondItem="QL2-Q5-Xu6" secondAttribute="bottom" constant="40" id="8Md-Pf-oWm"/>
+                            <constraint firstItem="txv-tK-Z4R" firstAttribute="top" secondItem="hc8-js-O8e" secondAttribute="bottom" constant="189" id="Ahz-v3-73e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LDs-d4-Gsh" secondAttribute="trailing" constant="83" id="MGz-jZ-rdR"/>
+                            <constraint firstItem="hc8-js-O8e" firstAttribute="top" secondItem="LDs-d4-Gsh" secondAttribute="bottom" constant="64" id="NoM-Um-ccf"/>
+                            <constraint firstItem="hc8-js-O8e" firstAttribute="trailing" secondItem="EZM-8e-Cgd" secondAttribute="trailingMargin" id="gTU-gq-BXD"/>
+                            <constraint firstItem="LDs-d4-Gsh" firstAttribute="leading" secondItem="EZM-8e-Cgd" secondAttribute="leadingMargin" constant="83" id="sCu-bM-aAu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="Image" destination="hc8-js-O8e" id="ibM-3F-Yc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSg-GT-Tjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="623"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xO3-lY-XRO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="59Q-YH-IWa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s86-TT-oXy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4ut-Pc-szg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXu-Bk-kRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="623"/>
+        </scene>
+    </scenes>
+</document>
